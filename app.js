@@ -1,5 +1,6 @@
 // A pseudo-enum for format types
 const FormatTypes = {
+    MILLISECOND: 'ms',
     SECOND: 'sec',
     MINUTE: 'min',
     HOUR: 'hr',
@@ -16,13 +17,13 @@ const FormatTypes = {
  *
  * @param {string} timestamp1 - First timestamp.
  * @param {string} timestamp2 - Second timestamp.
- * @param {string} format - The desired output format. Options are 'sec' (seconds), 'min' (minutes), 'hr' (hours),
+ * @param {string} format - The desired output format. Options are 'ms' (milliseconds), 'sec' (seconds), 'min' (minutes), 'hr' (hours),
  *                          'day' (days), 'wk' (weeks), 'mon' (months), 'yr' (years), 'dhms' (days, hours, minutes, seconds),
  *                          'detail' (detailed breakdown including all units).
  * @returns {number|string} - Difference between the timestamps in the desired format.
  * @throws {Error} - Throws an error if an unsupported format is provided.
  */
-function timeDiffCalc(timestamp1, timestamp2, format = 'sec') {
+function timeDiffCalc(timestamp1, timestamp2, format = FormatTypes.SECOND) {
     // Convert the given timestamps to Date objects
     const date1 = new Date(timestamp1);
     const date2 = new Date(timestamp2);
@@ -31,6 +32,10 @@ function timeDiffCalc(timestamp1, timestamp2, format = 'sec') {
     const differenceInMilliseconds = Math.abs(date1 - date2);
 
     switch (format) {
+        case FormatTypes.MILLISECOND:
+            // Return difference in milliseconds
+            return differenceInMilliseconds;
+
         case FormatTypes.SECOND:
             // Return difference in seconds
             return differenceInMilliseconds / 1000;

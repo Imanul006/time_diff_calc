@@ -6,7 +6,7 @@ This JavaScript utility calculates the difference between two given timestamps a
 ## Features
 
 - **Calculate Time Difference:** Easily calculate the time difference between two timestamps.
-- **Multiple Formats:** The system supports returning the time difference in various formats, including seconds, minutes, hours, days, weeks, months, years, a combined format of days, hours, minutes, and seconds (DHMS), and a detailed format specifying years, days, hours, minutes, and seconds.
+- **Multiple Formats:** The system supports returning the time difference in various formats, including milliseconds, seconds, minutes, hours, days, weeks, months, years, a combined format of days, hours, minutes, and seconds (DHMS), and a detailed format specifying years, days, hours, minutes and seconds.
 
 ## Installation
 
@@ -37,6 +37,10 @@ const timestamp1 = "2022-01-01T00:00:00Z";
 const timestamp2 = "2023-01-02T12:30:45Z";
 
 // Calculate the difference in a specific format
+
+// To get the difference in Milliseconds
+const differenceInMilliseconds = timeDiffCalc(timestamp1, timestamp2, FormatTypes.MILLISECOND);
+console.log(`Difference in Milliseconds: ${differenceInMilliseconds}`);
 
 // To get the difference in Seconds
 const differenceInSecond = timeDiffCalc(timestamp1, timestamp2, FormatTypes.SECOND);
@@ -77,6 +81,7 @@ console.log(`Detailed difference: ${detailedDifference}`);
 
 ## Outputs
 ```#
+Difference in Milliseconds: 31667445000
 Difference in Seconds: 31667445
 Difference in Minutes: 527790
 Difference in Hours: 8796
@@ -109,3 +114,14 @@ Contributions, issues, and feature requests are welcome. Feel free to check [iss
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+## Keywords
+
+#time_difference
+#timestamp_comparison
+#duration_calculation
+#time_format_conversion
+#date_difference
+#interval_measurement
+#time_unit_conversion
+#datetime utility
