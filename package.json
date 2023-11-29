@@ -17,13 +17,13 @@
   },
   "homepage": "https://github.com/Imanul006/time_diff_calc#readme",
   "keywords": [
-    "time difference",
-    "timestamp comparison",
-    "duration calculation",
-    "time format conversion",
-    "date difference",
+    "time-difference",
+    "timestamp-comparison",
+    "duration-calculation",
+    "time-format-conversion",
+    "date-difference",
     "interval measurement",
-    "time unit conversion",
-    "datetime utility"
+    "time-unit-conversion",
+    "datetime-utility"
   ]
 }
