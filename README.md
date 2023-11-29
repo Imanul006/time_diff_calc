@@ -10,7 +10,19 @@ This JavaScript utility calculates the difference between two given timestamps a
 
 ## Installation
 
-To use this utility in your project, simply include the JavaScript file in your project directory.
+To integrate the `@ask-imon/time_diff_calc` utility into your project, follow these steps:
+
+1. **Ensure Node.js and npm are Installed**: Make sure Node.js and npm are installed on your system. If not, download them from [the official Node.js website](https://nodejs.org/).
+
+2. **Install the Package**: In your project's root directory, run the following command:
+
+   ```sh
+   npm install @ask-imon/time_diff_calc
+   ```
+
+    This will download and install the time_diff_calc package and its dependencies.
+
+3. **Verify Installation**: Check the node_modules folder in your project directory to ensure the package is installed.   
 
 ## Usage
 
