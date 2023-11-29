@@ -6,7 +6,7 @@ This JavaScript utility calculates the difference between two given timestamps a
 ## Features
 
 - **Calculate Time Difference:** Easily calculate the time difference between two timestamps.
-- **Multiple Formats:** Supports returning the difference in seconds or a formatted string with days, hours, minutes, and seconds.
+- **Multiple Formats:** The system supports returning the time difference in various formats, including seconds, minutes, hours, days, weeks, months, years, a combined format of days, hours, minutes, and seconds (DHMS), and a detailed format specifying years, days, hours, minutes, and seconds.
 
 ## Installation
 
@@ -29,24 +29,70 @@ To integrate the `@ask-imon/time_diff_calc` utility into your project, follow th
 The function `timeDiffCalc` can be used as follows:
 
 ```javascript
-const timeDiffCalc = require('@ask-imon/time_diff_calc');
+// Import the function and FormatTypes - assuming they are in the same file
+const { timeDiffCalc, FormatTypes } = require('@ask-imon/time_diff_calc');
 
-// Example usage
-const timestamp1 = '2023-01-01T00:00:00Z';
-const timestamp2 = '2023-01-02T01:02:03Z';
+// Example timestamps
+const timestamp1 = "2022-01-01T00:00:00Z";
+const timestamp2 = "2023-01-02T12:30:45Z";
 
-// Get difference in seconds
-console.log(timeDiffCalc(timestamp1, timestamp2, 'sec'));
+// Calculate the difference in a specific format
 
-// Get difference in days, hours, minutes, and seconds
-console.log(timeDiffCalc(timestamp1, timestamp2, 'dhms'));
+// To get the difference in Seconds
+const differenceInSecond = timeDiffCalc(timestamp1, timestamp2, FormatTypes.SECOND);
+console.log(`Difference in Seconds: ${differenceInSecond}`);
+
+// To get the difference in Minutes
+const differenceInMinutes = timeDiffCalc(timestamp1, timestamp2, FormatTypes.MINUTE);
+console.log(`Difference in Minutes: ${differenceInMinutes}`);
+
+// To get the difference in Hours (Approx.)
+const differenceInHours = timeDiffCalc(timestamp1, timestamp2, FormatTypes.HOUR);
+console.log(`Difference in Hours: ${differenceInHours}`);
+
+// To get the difference in Day (Approx.)
+const differenceInDays = timeDiffCalc(timestamp1, timestamp2, FormatTypes.DAY);
+console.log(`Difference in Days: ${differenceInDays}`);
+
+// To get the difference in Weeks (Approx.)
+const differenceInWeeks = timeDiffCalc(timestamp1, timestamp2, FormatTypes.WEEK);
+console.log(`Difference in Weeks: ${differenceInWeeks}`);
+
+// To get the difference in Months (Approx.)
+const differenceInMonths = timeDiffCalc(timestamp1, timestamp2, FormatTypes.MONTH);
+console.log(`Difference in Months: ${differenceInMonths}`);
+
+// To get the difference in Years (Approx.)
+const differenceInYears = timeDiffCalc(timestamp1, timestamp2, FormatTypes.YEAR);
+console.log(`Difference in Years: ${differenceInYears}`);
+
+// To get the difference in DHMS (Days, Hours, Minutes, Seconds)
+const differenceInDHMS = timeDiffCalc(timestamp1, timestamp2, FormatTypes.DHMS);
+console.log(`Difference in DHMS: ${differenceInDHMS}`);
+
+// To get a detailed breakdown
+const detailedDifference = timeDiffCalc(timestamp1, timestamp2, FormatTypes.DETAIL);
+console.log(`Detailed difference: ${detailedDifference}`);
+```
+
+## Outputs
+```#
+Difference in Seconds: 31667445
+Difference in Minutes: 527790
+Difference in Hours: 8796
+Difference in Days: 366
+Difference in Weeks: 52
+Difference in Months: 12
+Difference in Years: 1
+Difference in DHMS: 366 Days, 12 Hours, 30 Minutes, 45 Seconds
+Detailed difference: 1 Year, 1 Day, 12 Hours, 30 Minutes, 45 Seconds
 ```
 
 ## Parameters
 
 - `timestamp1` (string): First timestamp.
 - `timestamp2` (string): Second timestamp.
-- `format` (string): The desired output format ('sec' for seconds or 'dhms' for days, hours, minutes, and seconds).
+- `format` (Enum FormatTypes): The desired output format.
 
 ## Returns
 
