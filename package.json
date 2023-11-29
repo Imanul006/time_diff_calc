@@ -1,0 +1,19 @@
+{
+  "name": "@ask-imon/time_diff_calc",
+  "version": "1.0.0",
+  "description": "A package that will help user calculate difference between 2 timestamps and get the output in multiple format, based on requirements.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Imanul006/time_diff_calc.git"
+  },
+  "author": "Imon Siddique",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Imanul006/time_diff_calc/issues"
+  },
+  "homepage": "https://github.com/Imanul006/time_diff_calc#readme"
+}
